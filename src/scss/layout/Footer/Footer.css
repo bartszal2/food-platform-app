@@ -1,0 +1,11 @@
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #AAA;
+}/*# sourceMappingURL=Footer.css.map */

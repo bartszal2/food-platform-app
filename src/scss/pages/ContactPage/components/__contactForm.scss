@@ -1,0 +1,99 @@
+@import '../../../base/variables';
+
+&__form__header {
+    max-width: 1500px;
+    margin: 4rem auto;
+
+    @media screen and (max-width: 1500px) {
+        margin: 4rem 1.5rem;
+    }
+
+    .header__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0.65rem;
+    }
+
+    .header__text {
+        font-size: 15px;
+        color: #444;
+        line-height: 26px;
+    }
+}
+
+&__form {
+    max-width: 1500px;
+    margin: 4rem auto;
+
+    @media screen and (max-width: 1500px) {
+        margin: 4rem 1.5rem;
+    }
+
+    .form-label {
+        display: block;
+        margin: 2rem 0;
+        font-size: 11px;
+        letter-spacing: 0.45px;
+        color: #999;
+        text-transform: uppercase;
+        position: relative;
+
+        .form-input, .form-select, .form-textarea {
+            display: block;
+            margin-top: 0.5rem;
+            width: 100%;
+            padding: 0.6rem 1rem;
+            border: 1px solid #DDD;
+            border-radius: 6px;
+        }
+
+        .form-input:invalid, .form-select:invalid, .form-textarea:invalid {
+            border: 1px solid $accent-other-primary-style;
+            background-color: $accent-color-secondary-style;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+
+            @media screen and (max-width: 510px) {
+                min-height: 180px;
+            }
+        }
+    }
+
+    &__buttons-group {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        @media screen and (max-width: 510px) {
+            flex-direction: column;
+        }
+
+        .form-input-button {
+            border: none;
+            background-color: $primary-btn-bg-color;
+            color: $primary-btn-color;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.25px;
+            border-radius: 8px;
+            width: 200px;
+            padding: 0.8rem 0;
+            cursor: pointer;
+            transition: $default-transition;
+
+            @media screen and (max-width: 510px) {
+                width: 100%;
+            }
+
+            &:hover {
+                background-color: $primary-btn-hover-bg-color;
+                color: $primary-btn-hover-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../layout/grid';
+
+.main-container {
+    @include grid;
+
+    @import '../../layout/Header/Header.scss';
+    @import '../../layout/ShoppingCart/ShoppingCart.scss';
+
+    @import './components/sectionMain';
+    @import './components/sectionSeasonOffer';
+    @import './components/sectionAboutUs';
+    @import './components/sectionPartners';
+
+    @import '../../layout/Footer//Footer.scss';
+}

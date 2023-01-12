@@ -1,0 +1,16 @@
+@import '../../layout/grid';
+
+.contact-container {
+    @include grid;
+
+    @import '../../layout/Header/Header.scss';
+    @import '../../layout/ShoppingCart/ShoppingCart.scss';
+
+    .main {
+        flex: 1;
+        @import './components/_contactForm';
+        @import './components/_contactMessage';
+    }
+
+    @import '../../layout/Footer/Footer.scss';
+}

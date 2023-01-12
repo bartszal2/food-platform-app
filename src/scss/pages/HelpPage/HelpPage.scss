@@ -1,0 +1,121 @@
+@import '../../layout/grid';
+@import '../../base/variables';
+
+.help-container {
+    @include grid;
+
+    @import '../../layout/Header/Header.scss';
+    @import '../../layout/ShoppingCart/ShoppingCart.scss';
+
+    .section-help {
+        flex: 1;
+
+        .help__header {
+            max-width: 1500px;
+            margin: 4rem auto;
+
+            @media screen and (max-width: 1500px) {
+                margin: 4rem 1.5rem;
+            }
+
+            .header__title {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 0.65em;
+            }
+            
+            .header__text {
+                font-size: 15px;
+                color: $secondary-text-color;
+                line-height: 24px;
+            }
+        }
+
+        .help__main {
+            max-width: 1500px;
+            margin: 4rem auto;
+
+            @media screen and (max-width: 1500px) {
+                margin: 4rem 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .main-title {
+                font-weight: 700;
+                margin-top: 4rem;
+                margin-bottom: 1rem;
+                position: relative;
+                margin-left: 20px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: $accent-color;
+                    border-radius: 6px;
+                    width: 12px;
+                    height: 100%;
+                    border-radius: 4px;
+                    left: -20px;
+                }
+            }
+
+            .main__accordion {
+                padding: 0.4rem 1.5rem;
+                border-radius: 8px;
+                overflow: hidden;
+                background-color: transparent;
+                border: 1px solid $accent-other-primary-style;
+                margin-bottom: 1.25rem;
+                margin-left: 1.25rem;
+
+                @media screen and (max-width: 800px) {
+                    margin-left: 0;
+                }
+
+                label {
+                    display: block;
+                }
+
+                .accordion_check {
+                    display: none;
+                }
+
+                .accordion_check:checked ~ .accordion-text {
+                    opacity: 1;
+                    margin-top: 0.8rem;
+                    max-height: 250px;
+
+                    @media screen and (max-width: 1500px) {
+                        max-height: 500px;
+                    }
+                }
+
+                .accordion-title {
+                    font-weight: 500;
+                    font-size: 15px;
+                    margin: 0.5rem 0;
+                    color: $primary-text-color;
+                    line-height: 18px;
+                    position: relative;
+                }
+
+                .accordion-text {
+                    font-weight: 400;
+                    margin-top: 0;
+                    font-size: 14px;
+                    color: $secondary-text-color;
+                    line-height: 20px;
+                    opacity: 0;
+                    max-height: 0px;
+                    transition: 0.6s ease;
+
+                    @media screen and (max-width: 800px) {
+                        transition: 0.6s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    @import '../../layout//Footer/Footer.scss';
+}

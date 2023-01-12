@@ -1,0 +1,88 @@
+@import '../../../base/variables';
+
+.shopping-cart__summary {
+    height: 25%;
+    border-top: 1px solid $separating-line-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+        height: auto;
+    }
+    
+    .summary__container {
+        padding: 1.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+
+        .container__information {
+
+            .information__paragraph {
+                margin: 0;
+                font-size: 12px;
+                color: $secondary-text-color;
+
+                &:first-child {
+                    font-weight: 600;
+                    color: $primary-text-color;
+                }
+            }
+        }
+
+            .container__amount {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                font-weight: 600;
+
+                .btn-primary {
+                    margin-top: 1rem;
+                    border: 1px solid rgb(255, 208, 0);
+                    background-color: rgb(255, 208, 0);
+                    color: #222;
+                    border: none;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 0.25px;
+                    font-size: 10px;
+                    border-radius: 8px;
+                    width: 200px;
+                    padding: 0.8rem 0;
+                    transition: $default-transition;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $primary-btn-hover-bg-color;
+                        color: $primary-btn-hover-color;
+                    }
+                }
+
+                .btn-disabled {
+                    margin-top: 1rem;
+                    border: 1px solid #CCC;
+                    background-color: #DDD;
+                    color: #888;
+                    border: none;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 0.25px;
+                    font-size: 10px;
+                    border-radius: 8px;
+                    width: 200px;
+                    padding: 0.8rem 0;
+                    cursor: not-allowed;
+                }
+            }
+    
+    .summary__payment {
+        font-size: 12px;
+        color: $third-text-color;
+    }
+}

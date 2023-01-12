@@ -1,0 +1,265 @@
+@import '../../../components/button-styles';
+
+.section {
+        padding: 6rem 0;
+        max-width: 1500px;
+        margin: 0 auto;
+        background-color: white;
+        overflow: hidden;
+
+        @media screen and (max-width: 1500px) {
+            margin: 0 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+            &__title {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                position: relative;
+                display: inline-block;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 20vw;
+                    height: 1px;
+                    background-color: #DDD;
+                    right: 115%;
+                    top: 50%;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 20vw;
+                    height: 1px;
+                    background-color: #DDD;
+                    left: 115%;
+                    top: 50%;
+                }
+            }
+
+            &__text {
+                font-size: 15px;
+                color: #444;
+                text-align: center;
+            }
+
+        &__products__container {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            height: 255px;
+            overflow-x: auto;
+            
+            @media screen and (max-width: 1379px) {
+                height: calc(255px + 2rem);
+                padding-bottom: 2rem;
+            }
+
+            @import '../../../components/ProductCard/ProductCard';
+
+            .product__card {
+                animation: fadeUp 1s ease-in-out;
+            }
+
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &__search {
+            margin: 0 auto;
+            margin-top: 5rem;
+            display: flex;
+            gap: 6rem;
+
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
+                gap: 4rem;
+            }
+
+            &__form {
+                flex: 1;
+
+                &__header {
+
+                    .search__form__title {
+                        font-size: 22px;
+                        font-weight: 700;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .search__form__text {
+                        font-size: 15px;
+                        color: #444;
+                    }
+                }
+
+                &__main {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+
+                    @media screen and (max-width: 1500px) {
+                        display: block;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        @media screen and (max-width: 1500px) {
+                            margin-top: 1rem;
+                            flex-wrap: wrap;
+                        }
+
+                        @media screen and (max-width: 393px) {
+                            flex-direction: column;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            a {
+                                width: 100%;
+                            }
+                        }
+
+                    }
+
+                    input[type="text"] {
+                        border-radius: 24px;
+                        border: 1px solid #DDD;
+                        padding: 0.6rem 1.5rem;
+                        width: 400px;
+
+                        @media screen and (max-width: 500px) {
+                            width: 100%;
+                            font-size: 13px;
+                            padding: 0.8rem;
+                        }
+                    }
+
+                    input[type="button"] {
+                        @include button;
+                        @include btn-cursor-pointer;
+                        @include btn-secondary-style;
+                        margin-left: 1.5rem;
+
+                        &:hover {
+                            @include btn-secondary-hover-style;
+                        }
+
+                        @media screen and (max-width: 1500px) {
+                            margin-left: 0;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            width: 100%;
+                            font-size: 13px;
+                            padding: 0.8rem;
+                        }
+                    }
+
+                    .search__form__element {
+                        display: inline-block;
+                        margin: 0 1rem;
+                        font-size: 15px;
+                        color: #444;
+
+                        @media screen and (max-width: 500px) {
+                            width: 100%;
+                            margin: 0;
+                            text-align: center;
+                        }
+                    }
+
+                    button {
+                        @include button;
+                        @include btn-cursor-pointer;
+                        @include btn-secondary-style;
+                        width: max-content;
+
+                        &:hover {
+                            @include btn-secondary-hover-style;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            width: 100%;
+                            font-size: 13px;
+                            padding: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            &__product__categories {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                align-content: flex-start;
+
+                @media screen and (max-width: 992px) {
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+                }
+                
+                @media screen and (max-width: 500px) {
+                    a {
+                        width: 100%
+                    }
+                }
+
+                .search__product__category {
+                    @include button;
+                    @include btn-cursor-pointer;
+                    @include btn-outline-style;
+                    width: max-content;
+                    font-size: 12px;
+                    animation: fadeUp 1s ease-in-out;
+
+                    @media screen and (max-width: 992px) {
+                        margin-left: 0;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 13px;
+                        padding: 0.8rem;
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:hover {
+                        @include btn-outline-hover-style;
+                    }
+                }
+            }
+        }
+    }
+
+.center-item {
+    justify-content: center;
+    align-items: center;
+}

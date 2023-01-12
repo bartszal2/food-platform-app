@@ -1,0 +1,922 @@
+.randomfoody-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.randomfoody-container .header {
+  min-height: 180px;
+  padding-top: 2rem;
+  background-color: #666;
+}
+@media screen and (max-width: 576px) {
+  .randomfoody-container .header {
+    height: auto;
+    padding-bottom: 4rem;
+  }
+}
+.randomfoody-container .header a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.randomfoody-container .header .active-link {
+  font-weight: 600;
+  cursor: default;
+}
+.randomfoody-container .header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1500px;
+  padding: 0 3rem;
+  margin: 0 auto;
+  background-color: rgba(20, 20, 20, 0.25);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 12px;
+}
+@media screen and (max-width: 1500px) {
+  .randomfoody-container .header__bar {
+    margin: 0 1.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .randomfoody-container .header__bar {
+    padding-right: 1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .randomfoody-container .header__bar {
+    height: auto;
+    padding: 2rem 0;
+    flex-direction: column;
+    gap: 1rem 0;
+  }
+}
+.randomfoody-container .header__bar .bar__logoname {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media screen and (max-width: 576px) {
+  .randomfoody-container .header__bar .bar__logoname {
+    font-size: 10vw;
+  }
+}
+.randomfoody-container .header__bar .bar__menu {
+  display: flex;
+}
+.randomfoody-container .header__bar .bar__menu .menu-links {
+  display: flex;
+}
+@media screen and (max-width: 992px) {
+  .randomfoody-container .header__bar .bar__menu .menu-links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    margin: 0 3rem;
+    top: calc(100% + 5px);
+    left: 0;
+    width: calc(100% - 6em);
+    border-radius: 12px;
+    background-color: rgba(45, 45, 45, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .randomfoody-container .header__bar .bar__menu .menu-links .menu__element {
+    width: 90%;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .randomfoody-container .header__bar .bar__menu .menu-links {
+    margin: 0;
+    width: 100%;
+  }
+}
+.randomfoody-container .header__bar .bar__menu .menu-links-mobile-open {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 15px);
+}
+.randomfoody-container .header__bar .bar__menu .menu-settings {
+  display: flex;
+}
+@media screen and (max-width: 576px) {
+  .randomfoody-container .header__bar .bar__menu .menu-settings {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem 0;
+  }
+}
+.randomfoody-container .header__bar .bar__menu .menu__element {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 1rem;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: 0.3s ease-in-out;
+}
+.randomfoody-container .header__bar .bar__menu .menu__element--shopping-cart {
+  cursor: pointer;
+}
+.randomfoody-container .header__bar .bar__menu .menu__element__text {
+  margin-top: -1px;
+  margin-left: 0.5rem;
+}
+.randomfoody-container .header__bar .bar__menu .menu__element .material-symbols-outlined {
+  position: relative;
+  font-size: 22px;
+  font-weight: 300;
+}
+.randomfoody-container .header__bar .bar__menu .menu__element--random-foody {
+  padding: 0.4rem 0.6rem;
+  background-color: rgb(255, 208, 0);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #222;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: none;
+  transition: 0.3s ease-in-out;
+}
+.randomfoody-container .header__bar .bar__menu .menu__element--random-foody:hover {
+  background-color: transparent;
+  border: 1px solid rgb(255, 208, 0);
+  color: rgb(255, 208, 0);
+}
+.randomfoody-container .header__bar .bar__menu .menu__element--random-foody:hover .material-symbols-outlined {
+  color: rgb(255, 208, 0);
+}
+.randomfoody-container .header__bar .bar__menu .menu__element--random-foody .material-symbols-outlined {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: #222;
+  transition: 0.3s ease-in-out;
+}
+.randomfoody-container .header__bar .bar__menu .menu__element--shopping-cart-count {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -18%;
+  right: -19%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 208, 0);
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #222;
+}
+.randomfoody-container .header__bar .bar__menu .menu__element--mobile-menu {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .randomfoody-container .header__bar .bar__menu .menu__element--mobile-menu {
+    display: block;
+  }
+}
+.randomfoody-container .header__content {
+  max-width: 1500px;
+  padding: 8rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: -1;
+}
+@media screen and (max-width: 1500px) {
+  .randomfoody-container .header__content {
+    margin: 0 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .randomfoody-container .header__content {
+    padding: 2rem 0;
+  }
+}
+.randomfoody-container .header__content__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 576px) {
+  .randomfoody-container .header__content__title {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+.randomfoody-container .header__content__description {
+  width: 80%;
+  font-size: 18px;
+  color: #AAA;
+}
+@media screen and (max-width: 576px) {
+  .randomfoody-container .header__content__description {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+.randomfoody-container .shopping-cart-container {
+  width: 500px;
+  height: calc(100vh - 4rem);
+  margin: 2rem 0;
+  border-radius: 12px 0px 0px 12px;
+  background-color: white;
+  position: fixed;
+  z-index: 3;
+  padding: 1.5rem;
+  box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.1);
+  transition: 0.8s cubic-bezier(0.6, 0.48, 0.46, 0.96);
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 10%;
+}
+@media screen and (max-width: 600px) {
+  .randomfoody-container .shopping-cart-container .shopping-cart__header {
+    height: auto;
+  }
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__header .header__banner {
+  height: 70px;
+  border-radius: 8px;
+  flex: 0.9;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__header .header__banner .image-element {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__header .header__nav {
+  display: flex;
+  align-items: center;
+  flex: 0.1;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__header .header__nav .material-symbols-outlined {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 26px;
+  border-radius: 35px;
+  border: 1px solid #EEE;
+  color: #666;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__header .header__nav .material-symbols-outlined:hover {
+  color: #666;
+  background-color: #EEE;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__description {
+  font-size: 14px;
+  color: #666;
+  height: 15%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .randomfoody-container .shopping-cart-container .shopping-cart__description {
+    height: auto;
+    margin: 2rem 0;
+  }
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content {
+  height: calc(50% - 2rem);
+  margin: 1rem 0;
+  overflow-y: auto;
+}
+@media screen and (max-width: 600px) {
+  .randomfoody-container .shopping-cart-container .shopping-cart__content {
+    height: 60%;
+  }
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #EEE;
+  border-radius: 6px;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content::-webkit-scrollbar-thumb {
+  background-color: #CCC;
+  border-radius: 6px;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .content-notification {
+  height: 100%;
+  border-top: 1px solid #DDD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #666;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table {
+  width: calc(100% - 1rem);
+  border-collapse: collapse;
+  min-width: 350px;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table__th {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #AAA;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  padding-bottom: 1rem;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table__td {
+  font-size: 13px;
+  padding: 0.8rem 0.5rem;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart-table__th:first-child,
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart-table__td:first-child {
+  width: 35%;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart-table__th:nth-child(2),
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart-table__td:nth-child(2) {
+  width: 30%;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart-table__th:nth-child(3),
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart-table__td:nth-child(3) {
+  width: 25%;
+  text-align: center;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart-table__th:last-child,
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart-table__td:last-child {
+  width: 10%;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-image {
+  width: 100%;
+  height: 50px;
+  background-color: #DDD;
+  border-radius: 6px;
+  background-color: #DDD;
+  position: relative;
+  overflow: hidden;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-image .product-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-name {
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-description {
+  display: flex;
+  flex-wrap: wrap;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-description .shopping-cart__product-addition {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0.35px;
+  margin: 1px 0;
+  margin-right: 1.25rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-description .shopping-cart__product-addition::after {
+  content: "-";
+  position: absolute;
+  margin-left: 0.5rem;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-description .shopping-cart__product-addition:last-child::after {
+  content: "";
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-description .shopping-cart__product-addition:last-child {
+  margin-right: 0;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-down,
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-up {
+  background-color: #EEE;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: 0.3s ease-in-out;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-down:hover,
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-up:hover {
+  background-color: #DDD;
+}
+@media screen and (max-width: 500px) {
+  .randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-down,
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-up {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+  }
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-down .material-symbols-outlined,
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-up .material-symbols-outlined {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__count-container .shopping-cart__count-value {
+  padding: 0 1rem;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-delete {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #DDD;
+  border-radius: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-delete:hover {
+  background-color: #DDD;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-delete:hover .material-symbols-outlined {
+  color: #666;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__content .shopping-cart-table .shopping-cart__product-delete .material-symbols-outlined {
+  font-size: 21px;
+  color: #999;
+  font-weight: 300;
+  margin-top: -0.5px;
+  transition: 0.3s ease-in-out;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary {
+  height: 25%;
+  border-top: 1px solid #DDD;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .randomfoody-container .shopping-cart-container .shopping-cart__summary {
+    height: auto;
+  }
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary .summary__container {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .randomfoody-container .shopping-cart-container .shopping-cart__summary .summary__container {
+    flex-direction: column;
+  }
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary .container__information .information__paragraph {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary .container__information .information__paragraph:first-child {
+  font-weight: 600;
+  color: #222;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary .container__amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: 600;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary .container__amount .btn-primary {
+  margin-top: 1rem;
+  border: 1px solid rgb(255, 208, 0);
+  background-color: rgb(255, 208, 0);
+  color: #222;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  font-size: 10px;
+  border-radius: 8px;
+  width: 200px;
+  padding: 0.8rem 0;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary .container__amount .btn-primary:hover {
+  background-color: #444;
+  color: #EEE;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary .container__amount .btn-disabled {
+  margin-top: 1rem;
+  border: 1px solid #CCC;
+  background-color: #DDD;
+  color: #888;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  font-size: 10px;
+  border-radius: 8px;
+  width: 200px;
+  padding: 0.8rem 0;
+  cursor: not-allowed;
+}
+.randomfoody-container .shopping-cart-container .shopping-cart__summary .summary__payment {
+  font-size: 12px;
+  color: #AAA;
+}
+@media screen and (max-width: 600px) {
+  .randomfoody-container .shopping-cart-container {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    overflow-y: scroll;
+  }
+}
+.randomfoody-container .shopping-cart-open {
+  right: 0;
+}
+.randomfoody-container .shopping-cart-close {
+  right: -600px;
+  -webkit-animation: fadeDownEffect 1s 1s forwards;
+          animation: fadeDownEffect 1s 1s forwards;
+}
+@-webkit-keyframes fadeDownEffect {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeDownEffect {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.randomfoody-container a {
+  text-decoration: none;
+  color: inherit;
+}
+.randomfoody-container main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  .randomfoody-container main {
+    width: calc(100% - 3rem);
+    margin: 0 1.5rem;
+  }
+}
+.randomfoody-container main .main__random__container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+@media screen and (min-width: 1920px) {
+  .randomfoody-container main .main__random__container {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .randomfoody-container main .main__random__container {
+    width: 90%;
+  }
+}
+.randomfoody-container main .main__random__container__text {
+  padding: 3rem 0;
+  opacity: 0;
+  -webkit-animation: slideDownWithFadeUp 0.8s ease-in-out forwards;
+          animation: slideDownWithFadeUp 0.8s ease-in-out forwards;
+}
+.randomfoody-container main .main__random__container__text__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #222;
+}
+.randomfoody-container main .main__random__container__text__description {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #666;
+  text-align: center;
+}
+.randomfoody-container main .main__random__container__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .randomfoody-container main .main__random__container__loading {
+    margin: 8rem 0;
+  }
+}
+.randomfoody-container main .main__random__container__loading .loading__container__status {
+  margin-top: 2.5rem;
+  color: #222;
+  background-color: rgb(255, 208, 0);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 0.8rem 1.25rem;
+  margin-bottom: 2.5rem;
+}
+.randomfoody-container main .main__random__container__loading .loading__container__title {
+  text-align: center;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  font-size: 24px;
+  color: #222;
+}
+.randomfoody-container main .main__random__container__loading .loading__container__text {
+  max-width: 800px;
+  text-align: center;
+  font-size: 15px;
+  color: #666;
+}
+.randomfoody-container main .random__product {
+  min-height: 500px;
+  width: 100%;
+  padding: 2rem 2.25rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+  -webkit-animation: slideDownWithFadeUp 0.8s 0.3s ease-in-out forwards;
+          animation: slideDownWithFadeUp 0.8s 0.3s ease-in-out forwards;
+}
+@media screen and (max-width: 450px) {
+  .randomfoody-container main .random__product {
+    padding: 1.5rem 1.8rem;
+  }
+}
+.randomfoody-container main .random__product:hover {
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.3);
+}
+.randomfoody-container main .random__product:hover .random__product__image {
+  transform: scale(1.05);
+}
+.randomfoody-container main .random__product a {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.randomfoody-container main .random__product__image {
+  background-color: #EEE;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 0.45s ease-in-out;
+  overflow: hidden;
+}
+.randomfoody-container main .random__product__image::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+}
+.randomfoody-container main .random__product__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.randomfoody-container main .random__product__header {
+  display: flex;
+  justify-content: space-between;
+}
+.randomfoody-container main .random__product__categories {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  pointer-events: none;
+}
+.randomfoody-container main .random__product__category {
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 12px;
+  letter-spacing: 0.25px;
+  display: inline-block;
+  background-color: rgb(255, 208, 0);
+  color: #222;
+}
+.randomfoody-container main .random__product__category:last-child {
+  margin-right: 0;
+}
+.randomfoody-container main .random__product__add-to-shopping-cart {
+  width: 35px;
+  height: 35px;
+  background-color: #222;
+  color: white;
+  font-weight: 600;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.randomfoody-container main .random__product__add-to-shopping-cart:hover {
+  background-color: white;
+  color: #222;
+}
+.randomfoody-container main .random__product__add-to-shopping-cart:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.randomfoody-container main .random__product__add-to-shopping-cart::after {
+  content: "Dodaj do koszyka";
+  position: absolute;
+  color: #EEE;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: calc(100% + 5px);
+  right: -5px;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.randomfoody-container main .random__product__add-to-shopping-cart .material-symbols-outlined {
+  font-size: 16px;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+.randomfoody-container main .random__product__main {
+  pointer-events: none;
+}
+.randomfoody-container main .random__product__prev-price {
+  color: #AAA;
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.randomfoody-container main .random__product__price {
+  font-size: 22px;
+  color: white;
+  font-weight: 700;
+}
+.randomfoody-container main .random__product__title {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  padding-top: 0.45rem;
+  padding-bottom: 0.3rem;
+}
+.randomfoody-container main .random__product__description {
+  color: #AAA;
+  font-size: 15px;
+  margin-top: 0.5rem;
+  line-height: 22px;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 620px) {
+  .randomfoody-container main .random__product__description {
+    height: 150px;
+    padding-right: 2rem;
+    overflow-y: auto;
+  }
+}
+@-webkit-keyframes fadeUp {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes slideDownWithFadeUp {
+  from {
+    transform: translateY(-5px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes slideDownWithFadeUp {
+  from {
+    transform: translateY(-5px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.randomfoody-container .footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #AAA;
+}/*# sourceMappingURL=RandomFoodyPage.css.map */

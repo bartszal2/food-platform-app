@@ -1,0 +1,295 @@
+.product-ordering-modal-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 100;
+  -webkit-animation: fadeUp 0.3s ease-in-out;
+          animation: fadeUp 0.3s ease-in-out;
+}
+.product-ordering-modal-container .product-ordering-modal__content {
+  width: 700px;
+  height: 400px;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+  -webkit-animation: slideDown 0.3s ease-in-out;
+          animation: slideDown 0.3s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .product-ordering-modal-container .product-ordering-modal__content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__header {
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+  border-bottom: 1px solid #DDD;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__header .header__title {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__header .header__title::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 208, 0);
+  height: 45px;
+  width: 15px;
+  border-radius: 0px 6px 6px 0px;
+  left: 0;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__header .header__nav {
+  display: flex;
+  align-items: center;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__header .header__nav .nav__button {
+  background-color: transparent;
+  color: #666;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  border-radius: 30px;
+  border: 1px solid #EEE;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__header .header__nav .nav__button:hover {
+  background-color: #EEE;
+  color: #666;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__header .header__nav .nav__button .material-symbols-outlined {
+  font-size: 16px;
+  font-weight: 600;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form {
+  height: 85%;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main {
+  height: calc(80% - 2rem);
+  margin: 1rem 0;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-info {
+  height: 35%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-info {
+    height: 20%;
+  }
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-info .product-info__image {
+  height: 50px;
+  width: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-info .product-info__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-info .product-info__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-info .product-info__name .product-info__price {
+  font-weight: 400;
+  margin-top: 1px;
+  font-size: 13px;
+  color: #888;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  height: calc(65% - 1rem);
+  overflow-y: auto;
+}
+@media screen and (max-width: 800px) {
+  .product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons {
+    height: calc(80% - 1rem);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-content: flex-start;
+  }
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons::-webkit-scrollbar {
+  width: 8px;
+  background-color: #EEE;
+  border-radius: 6px;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons::-webkit-scrollbar-thumb {
+  background-color: #CCC;
+  border-radius: 6px;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons .product-addon-notification {
+  font-size: 12px;
+  color: #888;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons .product-addon {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media screen and (max-width: 800px) {
+  .product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons .product-addon {
+    padding: 0.6rem 0;
+  }
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons .product-addon input {
+  display: none;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons .product-addon input:checked ~ .product-addon__checkbox-element {
+  background-color: rgb(255, 208, 0);
+  border: 1px solid rgb(255, 208, 0);
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .form__main .main__product-addons .product-addon .product-addon__checkbox-element {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  background-color: #EEE;
+  border: 1px solid #DDD;
+  transition: 0.2s ease-in-out;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer {
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (max-width: 800px) {
+  .product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer {
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__summary {
+  color: #666;
+  font-size: 13px;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__summary .summary__price {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__buttons {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__buttons {
+    flex-direction: column;
+  }
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__buttons .input-element {
+  background-color: rgb(255, 208, 0);
+  color: #222;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  font-size: 10px;
+  border-radius: 8px;
+  width: 125px;
+  padding: 0.8rem 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__buttons .input-element {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 400px) {
+  .product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__buttons .input-element {
+    width: 100%;
+  }
+}
+.product-ordering-modal-container .product-ordering-modal__content .modal__content__form .modal__content__footer .footer__buttons .input-element:hover {
+  background-color: #444;
+  color: #EEE;
+}
+
+@-webkit-keyframes fadeUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=ProductOrderingModal.css.map */

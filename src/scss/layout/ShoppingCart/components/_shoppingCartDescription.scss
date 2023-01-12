@@ -1,0 +1,14 @@
+@import '../../../base/variables';
+
+.shopping-cart__description {
+    font-size: 14px;
+    color: $secondary-text-color;
+    height: 15%;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+        height: auto;
+        margin: 2rem 0;
+    }
+}

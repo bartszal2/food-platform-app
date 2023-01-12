@@ -1,0 +1,213 @@
+@import '../../layout/grid';
+
+.product-container {
+    @include grid;
+
+    @import '../../layout/Header/Header.scss';
+    @import '../../layout/ShoppingCart/ShoppingCart.scss';
+
+    .product-section {
+        min-height: 625px;
+        max-width: 1500px;
+        margin: 2rem auto;
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+        
+        @media screen and (max-width: 600px) {
+              flex-direction: column;
+              width: 100%;
+              height: auto;
+              padding: 3rem;
+        }
+    
+        &__image {
+            width: 50%;
+    
+            @media screen and (max-width: 600px) {
+                width: 100%;
+            }
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+            }
+        }
+    
+        &__image-special-offer {
+            position: relative;
+    
+            &::after {
+                content: 'OFERTA SPECJALNA';
+                display: flex;
+                align-items: center;
+                text-align: center;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.35px;
+                color: white;
+                background-color: #222;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border-radius: 12px;
+                top: -3rem;
+                left: -3rem;
+                border-radius: 100px;
+            }
+        }
+    
+        &__content {  
+            width: 50%;
+    
+            @media screen and (max-width: 600px) {
+                width: 100%;
+            }
+    
+            .content__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            
+                .header__prevprice {
+                    color: #888;
+                    font-size: 14px;
+                    text-decoration: line-through;
+                }
+    
+                .header__price {
+                    font-size: 22px;
+                    color: #222;
+                    font-weight: 700;
+                }
+    
+                .header__add-to-cart {
+                    width: 40px;
+                    height: 40px;
+                    background-color: #444;
+                    color: #EEE;
+                    font-weight: 600;
+                    border-radius: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+                    position: relative;
+    
+                    &:hover {
+                        background-color: #DDD;
+                        color: #222;
+                    }
+    
+                    &:hover::after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+    
+                    &::after {
+                        content: 'Dodaj do koszyka';
+                        position: absolute;
+                        color: #EEE;
+                        font-size: 9px;
+                        font-weight: 500;
+                        letter-spacing: 0.35px;
+                        text-transform: uppercase;
+                        width: max-content;
+                        top: 0;
+                        right: calc(100% + 5px);
+                        border-radius: 6px;
+                        padding: 0.6rem 0.8rem;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        transition: 0.3s ease-in-out;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+    
+                    .material-symbols-outlined {
+                        font-size: 16px;
+                        margin-top: 1px;
+                        margin-left: 1px;
+                    }
+                }
+    
+                .header__status {
+                    font-size: 10px;
+                    background-color: #444;
+                    color: white;
+                    border-radius: 6px;
+                    padding: 0.8rem 1.2rem;
+                    display: inline-block;
+                    font-weight: 600;
+                    letter-spacing: 0.25px;
+                }
+    
+            .content__title {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                color: #222;
+            }
+    
+            .content__categories {
+                display: flex;
+            }
+    
+                .categories__element {
+                    font-weight: 700;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    padding: 0.4rem 1rem;
+                    border-radius: 12px;
+                    letter-spacing: 0.25px;
+                    background-color: rgb(255, 208, 0);
+                    margin-right: 6px;
+                    color: #222;
+    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+    
+            .content__description {
+                margin-top: 1rem;
+                color: #888;
+                font-size: 14px;
+                line-height: 20px;
+    
+                .description__ingredient-container {
+                    margin-top: 2.5rem;
+                    user-select: none;
+    
+                    .ingredient-title {
+                        font-weight: 700;
+                    }
+    
+                    .ingredient-container-element {
+                        margin-top: 0.5rem;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+    
+                        .ingredient-element {
+                            background-color: #F2F2F2;
+                            border-radius: 6px;
+                            padding: 0.4rem 0.8rem;
+                            margin: 0.25rem 0;
+                            font-size: 12px;
+                            letter-spacing: 0.3px;
+                        }
+    
+                    }
+                }
+            }
+    
+        }
+    }
+
+    @import '../../layout/Footer/Footer.scss';
+}

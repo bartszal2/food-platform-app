@@ -1,0 +1,70 @@
+@import '../base/variables';
+
+@mixin button {
+    padding: 8px 35px;
+    border-radius: 24px;
+    user-select: none;
+    transition: 0.3s ease-in-out;
+}
+
+@mixin btn-accent-style {
+    font-size: 11px;
+    letter-spacing: 0.25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@mixin btn-primary-style {
+    background-color: $primary-btn-bg-color;
+    color: $primary-btn-color;
+}
+
+    @mixin btn-primary-hover-style {
+        background-color: $primary-btn-hover-bg-color;
+        color: $primary-btn-hover-color;
+    }
+
+@mixin btn-secondary-style {
+    background-color: #444;
+    border: 1px solid #444;
+    color: white;
+}
+
+    @mixin btn-secondary-hover-style {
+        border: 1px solid #888;
+        background-color: #888;
+    }    
+
+@mixin btn-outline-style {
+    background-color: transparent;
+    border: 1px solid #BBB;
+    color: #888;
+}
+
+    @mixin btn-outline-hover-style {
+        background-color: #444;
+        border: 1px solid #444;
+        color: white;
+    }
+
+@mixin btn-disabled-style {
+    background-color: $disabled-btn-bg-color;
+    color: $disabled-btn-color;
+}
+
+    @mixin btn-disabled-hover-style {
+        background-color: #D2D2D2;
+        color: #666;
+    }
+
+@mixin btn-cursor-default {
+    cursor: default;
+}
+
+@mixin btn-cursor-pointer {
+    cursor: pointer;
+}
+
+@mixin btn-cursor-disabled {
+    cursor: not-allowed;
+}
