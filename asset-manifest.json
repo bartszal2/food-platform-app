@@ -1,7 +1,7 @@
 {
-  "main.css": "/food-platform-app/static/css/main.d2e4b7af.chunk.css",
-  "main.js": "/food-platform-app/static/js/main.945a14b6.chunk.js",
-  "main.js.map": "/food-platform-app/static/js/main.945a14b6.chunk.js.map",
+  "main.css": "/food-platform-app/static/css/main.6da3b323.chunk.css",
+  "main.js": "/food-platform-app/static/js/main.4ccbb21a.chunk.js",
+  "main.js.map": "/food-platform-app/static/js/main.4ccbb21a.chunk.js.map",
   "static/js/1.877ddeaf.chunk.js": "/food-platform-app/static/js/1.877ddeaf.chunk.js",
   "static/js/1.877ddeaf.chunk.js.map": "/food-platform-app/static/js/1.877ddeaf.chunk.js.map",
   "static/js/2.dd2a72da.chunk.js": "/food-platform-app/static/js/2.dd2a72da.chunk.js",
@@ -9,8 +9,8 @@
   "runtime~main.js": "/food-platform-app/static/js/runtime~main.4c3d1e7a.js",
   "runtime~main.js.map": "/food-platform-app/static/js/runtime~main.4c3d1e7a.js.map",
   "static/media/product-template.png": "/food-platform-app/static/media/product-template.2792aa02.png",
-  "static/css/main.d2e4b7af.chunk.css.map": "/food-platform-app/static/css/main.d2e4b7af.chunk.css.map",
+  "static/css/main.6da3b323.chunk.css.map": "/food-platform-app/static/css/main.6da3b323.chunk.css.map",
   "index.html": "/food-platform-app/index.html",
-  "precache-manifest.8ad02890dbfff7b226b23e14aaa50aaf.js": "/food-platform-app/precache-manifest.8ad02890dbfff7b226b23e14aaa50aaf.js",
+  "precache-manifest.2c3592cd7acdba9c86b11424f2839676.js": "/food-platform-app/precache-manifest.2c3592cd7acdba9c86b11424f2839676.js",
   "service-worker.js": "/food-platform-app/service-worker.js"
 }

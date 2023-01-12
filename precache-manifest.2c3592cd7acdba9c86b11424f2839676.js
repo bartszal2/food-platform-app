@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "945a14b65a854c7bf1e2",
-    "url": "/food-platform-app/static/css/main.d2e4b7af.chunk.css"
+    "revision": "4ccbb21a44bc7b4f1631",
+    "url": "/food-platform-app/static/css/main.6da3b323.chunk.css"
   },
   {
-    "revision": "945a14b65a854c7bf1e2",
-    "url": "/food-platform-app/static/js/main.945a14b6.chunk.js"
+    "revision": "4ccbb21a44bc7b4f1631",
+    "url": "/food-platform-app/static/js/main.4ccbb21a.chunk.js"
   },
   {
     "revision": "877ddeaf8032078f6663",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/food-platform-app/static/media/product-template.2792aa02.png"
   },
   {
-    "revision": "2338cebe80b3cd5b7d86393945e76c16",
+    "revision": "f8115b844d437cb073206a7b3405d628",
     "url": "/food-platform-app/index.html"
   }
 ];
