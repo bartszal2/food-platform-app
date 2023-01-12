@@ -42,17 +42,3 @@ The most important features of the food ordering platform are below!
 <br>
 
 #### [Back to top](#food-ordering-platform)
----
-
-## Installation
-In the source code editor, navigate to the folder containing the project.
-### `cd ../food-platform-app`
-
-Install the dependencies needed to run the application.
-### `npm install`
-
-Launch the app!
-### `npm start`
-<br>
-
-#### [Back to top](#food-ordering-platform)
