@@ -1,4 +1,4 @@
-# **Food Ordering Platform**
+# **Food Platform App**
 
 'FOODY' is a platform for ordering food, with features such as an overview of the offer, randomized products, division of products into categories, tags, ingredients and its availability, an ordering form and a contact form.
 
@@ -29,7 +29,7 @@
     * React Redux (Redux Toolkit)
     * React Router
 
-#### ⬆️ [Back to top](#food-ordering-platform)
+#### ⬆️ [Back to top](#food-platform-app)
 ---
 
 ## 📂 Features
@@ -43,4 +43,4 @@ The most important functionalities of the platform can be found below!
 * Window for selecting available add-ons for the order
 * Shopping cart
 
-#### ⬆️ [Back to top](#food-ordering-platform)
+#### ⬆️ [Back to top](#food-platform-app)
