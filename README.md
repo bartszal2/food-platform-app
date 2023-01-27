@@ -20,7 +20,7 @@
 
 ---
 
-## 🖥️ Technologies, frameworks and tools
+## 🖥️ <a name="technologies-frameworks-and-tools">Technologies, frameworks and tools<a/>
 * HTML
 * CSS (using the SASS preprocessor and the BEM methodology)
 * JavaScript
@@ -32,7 +32,7 @@
 #### ⬆️ [Back to top](#food-platform-app)
 ---
 
-## 📂 Features
+## 📂 <a name="features">Features<a/>
 The most important functionalities of the platform can be found below!
 
 * Platform offer with the possibility of filtering, sorting and searching
